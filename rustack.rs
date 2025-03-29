@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 //! Implementing stack data structure in rust.
 /// # Rustack
 /// This is a stack data structure implementation 
@@ -69,7 +70,7 @@ impl<T> Stack<T> {
 
     // IMPLEMETING ITERATION FOR THE STACK.
 
-    // Modifying the stack and turning it into an iterator.
+    // Modifying the stack: Turning it into an iterator.
     fn into_iter(self) -> IntoIter<T> {
         IntoIter(self)
     }
@@ -96,7 +97,7 @@ impl<T> Stack<T> {
 // Implemetantion of 3 iterations
 struct IntoIter<T>(Stack<T>);
 impl<T: Clone> Iterator for IntoIter<T> {
-    type Item = T;
+    type Item = T; // T is the type of value the iterator produces.
     fn next(&mut self) -> Option<Self::Item> {
         if !self.0.is_empty() {
             self.0.size -= 1;
@@ -123,6 +124,19 @@ impl<'a, T> Iterator for IterMut<'a, T> {
     }
 }
 
-fn main(){
-    println!("The stack implemetation")
+fn main() {
+    basic_ops();
+    // peek_ops();
+    // iter_ops();
+
+    fn basic_ops() {
+        let mut s = Stack::new();
+        s.push(1); s.push(2); s.push(3); s.push(4);
+
+        println!("size: {}, {:?}", s.len(), s);
+        println!("pop: {:?}, size {}", s.pop().unwrap(), s.len());
+        println!("empty: {}, {:?}", s.is_empty(), s);
+        s.clear();
+        println!("{:?}", s);
+    }
 }
