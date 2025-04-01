@@ -1,7 +1,8 @@
 #![allow(dead_code)]
 //! Evaluating mathematical expressions.
 /// This algorithm reads mathematical expressions involving brackets from left to 
-/// right and determines whether the brackets match
+/// right and evaluates them to find the answer.
+/// This program leverages stack data structure.
 ///
 use std::collections::HashMap;
 
