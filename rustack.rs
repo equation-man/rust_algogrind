@@ -1,4 +1,5 @@
 #![allow(dead_code)]
+#![allow(warnings)]
 //! Implementing stack data structure in rust.
 /// # Rustack
 /// This is a stack data structure implementation 
