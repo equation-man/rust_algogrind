@@ -1,5 +1,21 @@
-//! HOT METAL GAME.
 #![allow(warnings)]
+//! HOT METAL GAME.
+///
+/// DESCRIPTION  
+/// This game involves a group of people from 1 to n in a circle.  
+/// Starting from a designated persion, they are passing hot metal to each 
+/// other. When the action stops, the person holding the metal is eliminated from 
+/// the circle. We assume he/she didn't survive the heat hence lost.  
+/// This continues until only one person remains. This is the survivor hence the winner.  
+///
+/// Applications.  
+/// Solving problems involving circular data structures.  
+/// Example; Round-robin scheduling, Token parsing i.e Token Ring Network controling 
+/// which system gets to send data.  
+/// Cryptography and security; Secure message transmission. The choice of surviving 
+/// node or system can represent secure channels or keys.  
+///
+///
 
 
 #[derive(Debug)]
