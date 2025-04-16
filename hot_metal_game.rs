@@ -15,8 +15,6 @@
 /// Cryptography and security; Secure message transmission. The choice of surviving 
 /// node or system can represent secure channels or keys.  
 ///
-///
-
 
 #[derive(Debug)]
 struct Queue<T> {
